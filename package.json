@@ -1,0 +1,36 @@
+{
+  "name": "cocos-fbx-clip-slicer",
+  "version": "0.1.0",
+  "description": "Generate Cocos Creator FBX animation clip splits from filenames.",
+  "type": "module",
+  "bin": {
+    "cocos-fbx-clip-slicer": "dist/src/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "start": "node dist/src/cli.js"
+  },
+  "keywords": [
+    "cocos-creator",
+    "fbx",
+    "animation",
+    "clip",
+    "asset-pipeline"
+  ],
+  "author": "wang-yichun",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}

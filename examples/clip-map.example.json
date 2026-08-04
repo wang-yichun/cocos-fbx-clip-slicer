@@ -1,0 +1,50 @@
+{
+  "正常待机": {
+    "name": "idle_axe",
+    "loop": true
+  },
+  "正常移动": {
+    "name": "run_axe",
+    "loop": true
+  },
+  "售卖": {
+    "name": "sell",
+    "loop": true
+  },
+  "游泳中循环": {
+    "name": "swim_axe",
+    "loop": true
+  },
+  "持钻机和矿刀移动": {
+    "name": "swim_rig",
+    "loop": true
+  },
+  "持钻机采集": {
+    "name": "attack_rig",
+    "loop": false
+  },
+  "持矿刀采集": {
+    "name": "attack_axe",
+    "loop": false
+  },
+  "钻机待机": {
+    "name": "idle_rig",
+    "loop": true
+  },
+  "移动": {
+    "name": "run_rig",
+    "loop": true
+  },
+  "镐子漂浮待机": {
+    "name": "water_idle_axe",
+    "loop": true
+  },
+  "钻机漂浮待机": {
+    "name": "water_idle_rig",
+    "loop": true
+  },
+  "升级武器": {
+    "name": "upg_weapon",
+    "loop": false
+  }
+}

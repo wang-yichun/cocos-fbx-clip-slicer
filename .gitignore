@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+*.log
+*.bak
+*.fbx
+*.fbx.meta
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -31,19 +31,19 @@ npm run build
 Preview without changing the file:
 
 ```bash
-node dist/cli.js "assets/角色待机0-30移动40-60攻击70-100.fbx" --dry-run
+node dist/src/cli.js "assets/角色待机0-30移动40-60攻击70-100.fbx" --dry-run
 ```
 
 Apply changes and create a timestamped backup:
 
 ```bash
-node dist/cli.js "assets/角色待机0-30移动40-60攻击70-100.fbx"
+node dist/src/cli.js "assets/角色待机0-30移动40-60攻击70-100.fbx"
 ```
 
 Use a custom clip-name mapping:
 
 ```bash
-node dist/cli.js "assets/角色待机0-30移动40-60攻击70-100.fbx" --config clip-map.json
+node dist/src/cli.js "assets/角色待机0-30移动40-60攻击70-100.fbx" --config examples/clip-map.example.json
 ```
 
 After applying changes, return to Cocos Creator and reimport the FBX asset.
@@ -57,6 +57,8 @@ Supported range separators include `-`, `~`, `～`, `—`, `–`, `至`, and `�
 ```
 
 The values are frame numbers. The tool reads the actual FPS from the FBX `.meta` file and converts frames to seconds.
+
+See [`docs/filename-format.md`](docs/filename-format.md) for the complete convention.
 
 ## Safety
 
@@ -74,6 +76,21 @@ It preserves the root UUID, material settings, texture settings, and other impor
 npm run typecheck
 npm test
 npm run build
+```
+
+## Project structure
+
+```text
+src/
+  cli.ts       CLI entry point
+  parser.ts    Filename parser and range validation
+  config.ts    Chinese label to code-facing Clip mapping
+  meta.ts      Safe Cocos FBX meta updater
+  types.ts     Public data types
+
+tests/         Node.js tests
+examples/      Example artist filename and Clip mapping
+docs/          Filename convention documentation
 ```
 
 ## Roadmap
